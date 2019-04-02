@@ -1,0 +1,166 @@
+/**
+ * HEADER
+ */
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+}
+
+.header-logo {
+    width: 200px;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    z-index: 10;
+    color: $green;
+    user-select: none;
+    cursor: pointer;
+}
+
+.header-logo::after {
+    content: '€';
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+    z-index: 5;
+    color: $black;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    height: 33px;
+}
+
+.header-nav .burger {
+    width: 22px;
+    height: 24px;
+    margin-right: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    cursor: pointer;
+}
+
+.header-nav .burger-el {
+    width: 10px;
+    height: 10px;
+    background-color: $black;
+    border-radius: 2px;
+    transition: cubic-bezier(0.65, 0.01, 0.46, 1) 0.4s;
+    will-change: transform;
+}
+
+.header-nav .burger-el-1 { border-bottom-right-radius: 0 }
+
+.header-nav .burger-el-2 { border-bottom-left-radius: 0 }
+
+.header-nav .burger-el-3 { border-top-right-radius: 0 }
+
+.header-nav .burger-el-4 { border-top-left-radius: 0 }
+
+.burger-el-1-anim {
+    transform-origin: top left;
+    transform: scale(0);
+}
+
+.burger-el-2-anim {
+    transform-origin: top right;
+    transform: scale(0);
+}
+
+.burger-el-3-anim {
+    transform-origin: bottom left;
+    transform: scale(0);
+}
+
+.burger-el-4-anim {
+    transform-origin: bottom right;
+    transform: scale(2);
+}
+
+.header-nav .search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+    @media screen and (max-width: 767px){ display: none; }
+}
+
+.header-nav .search-input {
+    width: 260px;
+    height: 27px;
+    padding: 3px 12px;
+    font-size: 14px;
+    background-color: $white;
+    border: 2px solid $black;
+    border-radius: 100px;
+    box-shadow: 6px 7px $green;
+    cursor: text;
+    outline: none;
+    transition: cubic-bezier(0.65, 0.01, 0.46, 1) 0.2s;
+    will-change: transform;
+}
+
+.header-nav .search-input-anim { box-shadow: 3px 4px $green; }
+
+.header-nav input[type=submit] {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: transparent;    
+}
+
+.header-nav .search-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url('../medias/img/search.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: cubic-bezier(0.65, 0.01, 0.46, 1) 0.2s;
+    will-change: transform;
+}
+
+.header-nav .search-btn:hover {
+    transform: rotate(-15deg);
+}
+
+.header-connect {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: 170px;
+    height: 24px;
+    @media screen and (max-width: 1199px){ width: 125px; }
+    @media screen and (max-width: 991px){ width: 60px; }
+    @media screen and (max-width: 767px){ display: none; }
+}
+
+.header-connect .connect-el {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header-connect .login { background-image: url('../medias/img/log-in.svg'); }
+
+.header-connect .logout { background-image: url('../medias/img/log-out.svg'); }

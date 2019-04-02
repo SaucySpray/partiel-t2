@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^$ ./static/pages/index.php
+RewriteRule ^contact$ ./static/pages/contact.php
+RewriteRule ^about$ ./static/pages/about.php
