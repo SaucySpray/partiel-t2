@@ -1,5 +1,6 @@
 RewriteEngine On
 
 RewriteRule ^$ ./static/pages/index.php
-RewriteRule ^contact$ ./static/pages/contact.php
-RewriteRule ^about$ ./static/pages/about.php
+RewriteRule ^new$ ./static/pages/new.php
+RewriteRule ^edit$ ./static/pages/edit.php
+RewriteRule ^transaction$ ./static/pages/transaction.php

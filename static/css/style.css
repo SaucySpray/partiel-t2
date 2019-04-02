@@ -12,7 +12,7 @@ header {
   margin: 20px 0; }
 
 .header-logo {
-  width: 200px;
+  width: 20px;
   margin: 0;
   font-size: 22px;
   font-weight: bold;
@@ -139,7 +139,8 @@ header {
   align-items: center;
   flex-direction: row;
   width: 170px;
-  height: 24px; }
+  height: 24px;
+  visibility: hidden; }
   @media screen and (max-width: 1199px) {
     .header-connect {
       width: 125px; } }
@@ -162,6 +163,13 @@ header {
 
 .header-connect .logout {
   background-image: url("../medias/img/log-out.svg"); }
+
+.transaction {
+  display: flex;
+  flex-flow: row wrap;
+  width: 400px;
+  height: 50px;
+  background-color: #333; }
 
 /**
  * FOOTER
