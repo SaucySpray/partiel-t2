@@ -9,6 +9,7 @@
             VALUES
                 ('".$_POST["date"]."','".$_POST["ammount"]."','".$_POST["description"]."')");
     $new = $query->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

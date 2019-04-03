@@ -7,7 +7,7 @@
 <footer>
     
     <div class="footer-code">
-        All my <a href="https://github.com/SaucySpray/phplog" class="green">code</a> is available on github!
+        All my <a href="https://github.com/SaucySpray/partiel-t2" class="green">code</a> is available on github!
     </div>
 
     <div class="footer-social">

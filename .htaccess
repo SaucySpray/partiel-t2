@@ -2,5 +2,3 @@ RewriteEngine On
 
 RewriteRule ^$ ./static/pages/index.php
 RewriteRule ^new$ ./static/pages/new.php
-RewriteRule ^edit$ ./static/pages/edit.php
-RewriteRule ^transaction$ ./static/pages/transaction.php

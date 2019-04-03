@@ -7,6 +7,10 @@
     $query = $GLOBALS['pdo']->query("SELECT * FROM expenses");
     $expenses = $query->fetchAll();
 
+    $prep = $pdo->prepare("DELETE FROM expenses WHERE id=:itemid");
+    $prep->bindValue('itemid', $itemid);
+    $del = $prep->execute();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,12 +40,12 @@
                     <td><?= $_expense->date; ?></td>
                     <td><?= $_expense->ammount; ?>€</td>
                     <td><?= $_expense->description; ?></td>
-                    <td><a href="edit.php?id=<?= $_expense->id; ?>" class="edit btn-warning">edit</a></td>
-                    <td><a href="delete.php?id=<?= $_expense->id; ?>" class="delete btn-danger">delete</a></td>
+                    <td><a href="delete?id=<?= $_expense->id; ?>" class="delete btn-danger">delete</a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <a href="./new">ADD TRANSACTION</a>
     </div>
 
     <!-- FOOTER -->
